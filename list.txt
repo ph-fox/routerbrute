@@ -1,0 +1,12 @@
+admin
+user
+password
+adm
+passwd
+admin123
+password123
+12345
+123456789
+1234567890
+admin12345
+@l03e1t3
