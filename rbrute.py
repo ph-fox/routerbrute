@@ -1,6 +1,15 @@
-import requests, sys, os
+import requests, sys, os, re
 
-url = 'http://192.168.0.1'
+pattern = r'http'
+pat = r's'
+url = raw_input('Enter router ip: ')
+
+if re.match(pattern, url):
+    url = re.sub(pat,'',url)
+    pass
+else:
+    url = 'http://'+url
+
 
 def data():
     uzerl = open('list.txt','r')
