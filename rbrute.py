@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# coding: utf-8
+
 import requests, sys, os, re, optparse, time
 
 read = optparse.OptionParser()
@@ -31,6 +31,9 @@ try:
 
 
     def data():
+        global WORDLIST
+        if WORDLIST is None:
+            WORDLIST = 'list.txt'
         uzerl = open(WORDLIST, 'r')
         paszl = open(WORDLIST, 'r')
         uzer = uzerl.read().splitlines()
@@ -73,5 +76,5 @@ try:
     print("pls use or create another wordlist")
 
 except TypeError:
-    os.system('rbrute -h')
+    os.system('python3 rbrute -h')
 
